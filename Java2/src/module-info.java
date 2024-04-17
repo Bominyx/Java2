@@ -1,5 +1,7 @@
 module Java2
 {
+   exports exception;
+
    exports application;
 
    requires javafx.base;
