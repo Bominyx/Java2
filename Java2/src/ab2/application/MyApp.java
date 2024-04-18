@@ -5,12 +5,14 @@ import java.io.PrintStream;
 
 import exception.InvalidSourceException;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -46,7 +48,12 @@ public class MyApp extends Application
             throw new InvalidSourceException("HelloWorldFX.start: Ungültige Null-Referenz übergeben!");
          }
                 
-         
+         BorderPane root = (BorderPane) FXMLLoader.load(MyApp.class.getResource("/CardBorderPane.fxml"));
+         Scene scene = new Scene(root);
+         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+         primaryStage.setScene(scene);
+         primaryStage.show();
+
 //         Label label = new Label("Hello World2!");      
 //         Scene scene = new Scene(label);      
 //         primaryStage.setTitle("Hello World2!");

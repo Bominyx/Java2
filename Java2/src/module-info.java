@@ -14,5 +14,7 @@ module Java2
 
    requires javafx.controls;
 
-   requires javafx.graphics;
+   requires transitive javafx.graphics;
+   
+   requires javafx.fxml;
 }
