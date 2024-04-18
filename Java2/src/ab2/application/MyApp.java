@@ -1,4 +1,4 @@
-package aufgabe1.application;
+package ab2.application;
 
 import java.io.File;
 import java.io.PrintStream;

@@ -2,13 +2,13 @@ module Java2
 {
    exports exception;
 
-   exports aufgabe2.application;
+   exports ab2.application;
 
-   exports aufgabe1.application;
+   exports ab1.application;
 
-   opens aufgabe2.application;
+   opens ab2.application;
    
-   opens aufgabe1.application;
+   opens ab1.application;
    
    requires javafx.base;
 
